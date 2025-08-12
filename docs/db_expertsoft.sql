@@ -1,5 +1,25 @@
 CREATE DATABASE ExpertSoft;
 USE ExpertSoft;
+
+--
+-- Table structure for table `estado_transaccion`
+--
+DROP TABLE IF EXISTS `estado_transaccion`;
+CREATE TABLE `estado_transaccion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+--
+-- Dumping data for table `estado_transaccion`
+--
+LOCK TABLES `estado_transaccion` WRITE;
+INSERT INTO `estado_transaccion` VALUES
+(1,'Pendiente'),
+(2,'Fallida'),
+(3,'Completada');
+
 --
 -- Table structure for table `clientes`
 --
@@ -25,7 +45,9 @@ CREATE TABLE `transacciones` (
   `monto` int(11) DEFAULT NULL,
   `estado` varchar(100) DEFAULT NULL,
   `tipo` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id_estado` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_id_estado` FOREIGN KEY (`id_estado`) REFERENCES `estado_transaccion` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 
