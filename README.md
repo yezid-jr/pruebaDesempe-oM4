@@ -1,59 +1,43 @@
-# 📚 Sistema de Gestión de Biblioteca
+# 📚 Library Management System
 
-Este es un sistema monolítico para la gestión de una biblioteca, que permite administrar usuarios, libros y préstamos. El backend está construido con **Node.js** y **Express**, la base de datos se gestiona con **MySQL**, y el frontend se encuentra dentro de la carpeta `app`.
+This is a monolithic system for the management of , which allows you to manage transactions, clients and factories. The backend is built with **Node.js** and **Express**, the database is managed with **MySQL**.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## 🚀 Technologies used
 
 - Node.js
 - Express.js
 - MySQL
-- HTML, CSS, JavaScript (Frontend)
-- csv-parser (para cargar datos desde archivos CSV)
+- csv-parser (for uploading data from CSV files)
 - vite
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project structure
 ```bash
-biblioteca/
+library/
 │
 ├── docs/ # Documentation
-│       ...
-├── app/ # Frontend (HTML, CSS, JS)
-│       ...
-├── server/ # Backend
-│       ...
-├── index.html 
-├── .env # Variables de entorno
+│ ...
+├── server/#Backend
+│ ...
 ├── .gitignore
 └── README.md
 ```
 
-## 📦 Instalación
+## 📦 Installation
 
-1. Clona el repositorio:
-
-```bash
-git clone https://github.com/jcomte23/biblioteca-easy.git
-cd biblioteca
-```
-2. Instala dependencias:
+1. Install Dependencies:
 
 ```bash
 npm install
 ```
 
-4. Inicializa el backend:
+4. Initialize the backend:
 ```bash
 node server/index.js
 ```
 
-5. Inicializa el frontend:
-```bash
-npm run dev
-```
-
-# 📬 Licencia
-Este proyecto está bajo licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente.
+# 📬 License
+This project is under MIT license. You can use, modify and distribute freely.
